@@ -17,6 +17,6 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->group(['prefix' => 'api/v1'], function() use ($router){
-    $router->put('bourse/etudiant/{numeroEtudiant}', 'EtudiantController@createInfoBourse');
+$router->group(['prefix' => 'api'], function() use ($router){
+    $router->post('bourse', 'BourseController@createInfoBourse');
 });

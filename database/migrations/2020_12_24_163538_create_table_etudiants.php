@@ -13,7 +13,7 @@ class CreateTableEtudiants extends Migration
      */
     public function up()
     {
-        Schema::create('etudiants', function (Blueprint $table) {
+        Schema::create('bourses', function (Blueprint $table) {
             $table->increments('id');
             $table->string('numeroEtudiant');
             $table->string('status');
@@ -29,6 +29,6 @@ class CreateTableEtudiants extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('etudiants');
+        Schema::dropIfExists('bourses');
     }
 }
